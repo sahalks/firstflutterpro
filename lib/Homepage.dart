@@ -8,24 +8,26 @@ class Homepage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-            children: const [
-            Padding(
+          children: [
+            const Padding(
               padding: EdgeInsets.only(top: 20),
-              child: Text("Login Page",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+              child: Text(
+                "Login Page",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ),
-            Padding(padding: EdgeInsets.all(15.0),
+            const Padding(
+              padding: EdgeInsets.all(15.0),
               child: TextField(
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.account_circle),
                       label: Text("User Name"),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
-                      )
-                  )
-              ),
+                      ))),
             ),
-            Padding(padding: EdgeInsets.all(15.0),
+            const Padding(
+              padding: EdgeInsets.all(15.0),
               child: TextField(
                   obscuringCharacter: "*",
                   obscureText: true,
@@ -34,18 +36,17 @@ class Homepage extends StatelessWidget {
                       label: Text("Password"),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
-                      )
-                  )
-              ),
+                      ))),
             ),
-            Padding(padding:
-            child: ElevatedButton(onPressed: () {}, child: Text("Login")),
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: ElevatedButton(onPressed: () {}, child: Text("Login")),
+            ),
+            TextButton(
+                onPressed: () {}, child: Text("Not a User? Registration Here"))
+          ],
+        ),
       ),
-      TextButton(
-          onPressed: () {}, child: Text("Not a User? Registration Here"))
-      ],
-    ),)
-    ,
     );
   }
 }
